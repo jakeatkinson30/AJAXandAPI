@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>List of API's</title>
+
+    <link rel="stylesheet" href="libs/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <table class="table">
+        <tr>
+          <th>API name</th>
+          <th>API description</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>Neighbourhood</td>
+          <td>
+            <p>Returns the neighbourhood for the given latitude/longitude.</p>
+            <p>
+              For example: Latitude: 40.78343 and Longitude: -73.96625 will
+              return "Central Park".
+            </p>
+
+            <label for="latitudeNeighbourhood">Latitude:</label>
+            <input name="latitudeNeighbourhood" id="latitudeNeighbourhood" />
+            <br />
+            <label for="longitudeNeighbourhood">Longitude:</label>
+            <input name="longitudeNeighbourhood" id="longitudeNeighbourhood" />
+          </td>
+          <td>
+            <button id="neighbourhoodButton">Submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Weather Station with most recent weather observation</td>
+          <td>
+            <p>
+              Returns a weather station with the most recent weather
+              observation.
+            </p>
+            <p>
+              For example: Latitude: 43 and Longitude: -2 will return "San
+              Sebastian / Fuenterrabia, 19℉, clouds and visibility OK".
+            </p>
+
+            <label for="latitudeWeatherStation">Latitude:</label>
+            <input name="latitudeWeatherStation" id="latitudeWeatherStation" />
+            <br />
+            <label for="longitudeWeatherStation">Longitude:</label>
+            <input
+              name="longitudeWeatherStation"
+              id="longitudeWeatherStation"
+            />
+          </td>
+          <td>
+            <button id="weatherStationButton">Submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Placename lookup with postalcode</td>
+          <td>
+            <p>Returns the place(s) for the given postalcode.</p>
+            <p>
+              For example: Postal Code "FY78NJ" and Country "UK" will return
+              "Fleetwood, England".
+            </p>
+
+            <label for="postalCode">Postal Code:</label>
+            <input id="postalCode" name="postalCode" />
+            <br />
+            <label for="country">Country:</label>
+            <input id="country" name="country" />
+          </td>
+
+          <td>
+            <button id="postalCodeButton">Submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div>
+              <p id="resultBox"></p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script
+      type="application/javascript"
+      src="libs/js/jquery-3.6.3.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="neighbourhood/js/neighbourhood.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="getWeatherStation/js/getWeatherStation.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="getPostalCode/js/postalScript.js"
+    ></script>
+  </body>
+</html>
